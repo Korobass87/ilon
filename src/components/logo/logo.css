@@ -1,0 +1,56 @@
+.logo-wrapper {
+    display: flex;
+    width: 316px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(181, 181, 181, 0.2);;
+    border-left: 1px solid rgba(181, 181, 181, 0.2);
+    position: relative;
+}
+
+.logo-wrapper::before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid rgba(255, 255, 255, 1);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo-wrapper::after{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.logo-additional:after{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+.logo-additional:before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

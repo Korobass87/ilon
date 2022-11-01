@@ -1,0 +1,31 @@
+.navigation {
+    color: white;
+}
+.navigation-list{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navigation-item:not(:last-child){
+    margin-right: 40px;
+}
+
+.navigation-link {
+    color: rgba(255,255,255, 0.9);
+    text-decoration: none;
+
+    font-size: 16px;
+    line-height: 22px;
+    vertical-align: 0;
+    display: flex;
+    padding: 8px 0;
+
+
+}
+
+.navigation-link:hover {
+    color: rgba(181,181,181, 0.8);
+    border-bottom: 1px solid rgba(181,181,181,0.5) ;
+}
+
