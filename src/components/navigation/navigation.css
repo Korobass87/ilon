@@ -1,31 +1,103 @@
 .navigation {
-    color: white;
+  color: white;
 }
-.navigation-list{
-    display: flex;
-    list-style: none;
-    text-decoration: none;
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none;
 }
 
-.navigation-item:not(:last-child){
-    margin-right: 40px;
+.navigation-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .navigation-link {
-    color: rgba(255,255,255, 0.9);
-    text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  position: relative;
 
-    font-size: 16px;
-    line-height: 22px;
-    vertical-align: 0;
-    display: flex;
-    padding: 8px 0;
+  font-size: 16px;
+  line-height: 22px;
+  vertical-align: 0;
+  display: flex;
+  padding: 8px 0;
+}
 
-
+.active {
+  content: "";
+  width: 100%;
+  bottom: 0;
+  color: rgba(181, 181, 181, 0.8);
+  border-bottom: 1px solid rgba(181, 181, 181, 0.5);
 }
 
 .navigation-link:hover {
-    color: rgba(181,181,181, 0.8);
-    border-bottom: 1px solid rgba(181,181,181,0.5) ;
+  color: rgba(181, 181, 181, 0.8);
 }
 
+.navigation-link:hover:after {
+  content: "";
+  width: 100%;
+  bottom: 0;
+  border-bottom: 1px solid rgba(181, 181, 181, 0.5);
+  position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation-list {
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .navigation-item {
+    width: 120px;
+  }
+
+  .navigation-item:not(:last-child) {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+
+  .show {
+    transform: translateY(0);
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    z-index: 14;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .navigation-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 36px;
+  }
+
+  .navigation-item {
+    width: 100%;
+  }
+
+  .active {
+    color: rgba(181, 181, 181, 0.6);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navigation-item a {
+    font-size: 32px;
+  }
+}

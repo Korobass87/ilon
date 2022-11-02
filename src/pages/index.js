@@ -5,13 +5,4 @@ import { Guaranty } from "./guaranty";
 import { About } from "./about";
 import { Contacts } from "./contacts";
 
-
-export {
-  Home,
-  Technology,
-    Schedule,
-  Guaranty,
-  About,
-  Contacts
-
-};
+export { Home, Technology, Schedule, Guaranty, About, Contacts };

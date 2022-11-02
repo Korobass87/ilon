@@ -1,8 +1,9 @@
 body {
-  background-image: url("../public/img/fon.jpg")  ;
-  background-size:  cover;
-  background-repeat:  no-repeat;
-  background-position:  center;
+  background-image: url("../public/img/fon.jpg");
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 100vh;
 }
 
@@ -12,20 +13,43 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 768px;
   }
+}
 
 .planet {
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%,-50%);
+  transform: translate(50%, -50%);
   width: 62vh;
   height: 63vh;
-  background-image:url("../public/img/mars.png");
-  background-size:  contain;
+
+  background-image: url("../public/img/mars.png");
+  background-size: contain;
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
-z-index: 5;
-
+  z-index: 5;
 }
 
+@media screen and (max-width: 1200px)  {
+  .planet {
+    display: none;
+  }
+}
+
+@media screen and  (max-height: 531px) {
+  .planet {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 320px;
+  }
+}

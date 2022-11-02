@@ -1,14 +1,14 @@
-import {Header} from './components/header'
+import { Header } from "./components/header";
 import Router from "./constans/routers/routers";
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-        <div className="planet"></div>
-<Header/>
+      <div className="planet"></div>
+      <Header />
 
-        <Router />
+      <Router />
     </div>
   );
 }
